@@ -1,0 +1,135 @@
+{
+var x=0;
+var y=10;
+var s=6.557;
+var s1=10;
+fill(0,0,0);
+var char=function(f){
+    if(f===0){
+        text("-",x,y);
+    }
+    if(f===1){
+        text("+",x,y);
+    }
+};
+var type=function(a,b,c,d,e){
+    if(width-x<7*s){
+        y+=s1;
+        x=0;
+    }
+text("|",x,y);
+x+=s;
+char(a);
+x+=s;
+char(b);
+x+=s;
+char(c);
+x+=s;
+char(d);
+x+=s;
+char(e);
+x+=s;
+text("|",x,y);
+};
+keyReleased=function(){
+    fill(0,0,0);
+    if(keyCode===18){
+        type(0,0,0,0,0);
+    }// space is now alt
+    if(keyCode===65){
+        type(0,0,0,0,1);
+    }
+    if(keyCode===66){
+        type(0,0,0,1,0);
+    }
+    if(keyCode===67){
+        type(0,0,0,1,1);
+    }
+    if(keyCode===68){
+        type(0,0,1,0,0);
+    }
+    if(keyCode===69){
+        type(0,0,1,0,1);
+    }
+    if(keyCode===70){
+        type(0,0,1,1,0);
+    }
+    if(keyCode===71){
+        type(0,0,1,1,1);
+    }
+    if(keyCode===72){
+        type(0,1,0,0,0);
+    }
+    if(keyCode===73){
+        type(0,1,0,0,1);
+    }
+    if(keyCode===74){
+        type(0,1,0,1,0);
+    }
+    if(keyCode===75){
+        type(0,1,0,1,1);
+    }
+    if(keyCode===76){
+        type(0,1,1,0,0);
+    }
+    if(keyCode===77){
+        type(0,1,1,0,1);
+    }
+    if(keyCode===78){
+        type(0,1,1,1,0);
+    }
+    if(keyCode===79){
+        type(0,1,1,1,1);
+    }
+    if(keyCode===80){
+        type(1,0,0,0,0);
+    }
+    if(keyCode===81){
+        type(1,0,0,0,1);
+    }
+    if(keyCode===82){
+        type(1,0,0,1,0);
+    }
+    if(keyCode===83){
+        type(1,0,0,1,1);
+    }
+    if(keyCode===84){
+        type(1,0,1,0,0);
+    }
+    if(keyCode===85){
+        type(1,0,1,0,1);
+    }
+    if(keyCode===86){
+        type(1,0,1,1,0);
+    }
+    if(keyCode===87){
+        type(1,0,1,1,1);
+    }
+    if(keyCode===88){
+        type(1,1,0,0,0);
+    }
+    if(keyCode===89){
+        type(1,1,0,0,1);
+    }
+    if(keyCode===90){
+        type(1,1,0,1,0);
+    }
+    if(keyCode===188){
+        type(1,1,1,0,0);
+    }
+    if(keyCode===191){
+        type(1,1,1,0,1);
+    }
+    if(keyCode===190){
+        type(1,1,0,1,1);
+    }
+    if(keyCode===222){
+        type(1,1,1,1,0);
+    }
+    if(keyCode===8){
+        x=0;
+        y=10;
+        background(255,255,255);
+    }//reset backspace
+};
+}
